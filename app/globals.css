@@ -7,8 +7,4 @@ body,
 :root{
   height: 100%;
 }
-@media (max-width: 768px) {
-    .mimage {
-      image: url('/public/commingsoonm.jpg');
-    }
-  }
+

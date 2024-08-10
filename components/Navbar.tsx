@@ -1,7 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Person, Favorite, Search, LocalMall, Menu, Close } from "@mui/icons-material"; // Import the Close icon
+import {
+  Person,
+  Favorite,
+  Search,
+  LocalMall,
+  Menu,
+  Close,
+} from "@mui/icons-material"; // Import the Close icon
 import { UserButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/clerk-react";
 
@@ -10,15 +17,11 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow">
+    <nav className="bg-white shadow fixed top-0 left-0 w-full z-50">
       <div className="mx-2 py-5 lg:px-4 flex items-center justify-between">
-
         {/* Mobile Menu Button */}
         <div className="block lg:hidden">
-          <button 
-            className="p-3"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="p-3" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu />
           </button>
         </div>
@@ -30,7 +33,7 @@ const NavBar = () => {
           </Link>
         </div>
 
-        {/* Navbar Items */ }
+        {/* Navbar Items */}
         <div className="hidden lg:block w-2/4 text-center mx-3">
           <ul className="flex flex-wrap justify-center space-x-6">
             <li className="p-2">
@@ -95,7 +98,7 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-    
+
         <div className="flex lg:hidden">
           <button
             className="hover:bg-gray-300 m-1.5"
@@ -114,7 +117,7 @@ const NavBar = () => {
             <LocalMall />
           </button>
         </div>
-        
+
         {/* Desktop Icons */}
         <div className="hidden lg:flex space-x-2">
           <button className="mr-3 border-2 border-black px-4">
@@ -141,7 +144,6 @@ const NavBar = () => {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
         <div className="lg:hidden fixed inset-0 bg-white shadow-lg z-50">
@@ -156,38 +158,70 @@ const NavBar = () => {
 
             <ul className="space-y-4 mt-8">
               <li>
-                <Link href="/shop" className="block text-lg text-gray-800" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/shop"
+                  className="block text-lg text-gray-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   SHOP
                 </Link>
                 <div className="mt-2">
-                  <Link href="/shop/new-arrivals" className="block px-4 py-2 text-gray-800 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/shop/new-arrivals"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     New Arrivals
                   </Link>
-                  <Link href="/shop/sale" className="block px-4 py-2 text-gray-800 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/shop/sale"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     Sale
                   </Link>
                 </div>
               </li>
               <li>
-                <Link href="/story" className="block text-lg text-gray-800" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/story"
+                  className="block text-lg text-gray-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   OUR STORY
                 </Link>
                 <div className="mt-2">
-                  <Link href="/story/about-us" className="block px-4 py-2 text-gray-800 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/story/about-us"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     About Us
                   </Link>
-                  <Link href="/story/our-mission" className="block px-4 py-2 text-gray-800 hover:bg-gray-100" onClick={() => setIsMenuOpen(false)}>
+                  <Link
+                    href="/story/our-mission"
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     Our Mission
                   </Link>
                 </div>
               </li>
               <li>
-                <Link href="/journal" className="block text-lg text-gray-800" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/journal"
+                  className="block text-lg text-gray-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   JOURNAL
                 </Link>
               </li>
               <li>
-                <Link href="/last-chance" className="block text-lg text-gray-800" onClick={() => setIsMenuOpen(false)}>
+                <Link
+                  href="/last-chance"
+                  className="block text-lg text-gray-800"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   LAST CHANCE
                 </Link>
               </li>

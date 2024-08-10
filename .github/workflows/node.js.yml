@@ -31,6 +31,8 @@ jobs:
         cache: 'npm'
     - name: npm installation
       run: npm install
+    - name: build folder
+      run: npm run build
     # - run: npm run build 
 
 

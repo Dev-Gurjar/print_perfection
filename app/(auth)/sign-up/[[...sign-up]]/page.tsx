@@ -5,5 +5,3 @@ export default function Page() {
     <SignUp />
     </div>;
 }
-
-export const dynamic = "force dynamic";

@@ -5,5 +5,3 @@ export default function Page() {
     <SignIn />
     </div>;
 }
-
-export const dynamic = "force dynamic";

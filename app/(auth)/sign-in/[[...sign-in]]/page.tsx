@@ -1,7 +1,9 @@
-// import { SignIn } from "@clerk/nextjs";
+import { SignIn } from "@clerk/nextjs";
 
 export default function Page() {
   return <div className="h-screen flex justify-center items-center">
-    {/* <SignIn /> */}
+    <SignIn />
     </div>;
 }
+
+export const dynamic = "force dynamic";

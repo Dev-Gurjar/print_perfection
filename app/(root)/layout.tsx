@@ -5,7 +5,7 @@ import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import NavBar from "@/components/Navbar";
 
-export const Gfont = EB_Garamond({ weight: '400',subsets: ["latin"], variable: '--Gfont' });
+const Gfont = EB_Garamond({ weight: '400',subsets: ["latin"], variable: '--Gfont' });
 
 export const metadata: Metadata = {
   title: "Print Perfection",

@@ -14,13 +14,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-    env:
-      NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}}
-      CLERK_SECRET_KEY: ${{vars.CLERK_SECRET_KEY}}
-      NEXT_PUBLIC_CLERK_SIGN_IN_URL: ${{secrets.NEXT_PUBLIC_CLERK_SIGN_IN_URL}}
-      NEXT_PUBLIC_CLERK_SIGN_UP_URL: ${{secrets.NEXT_PUBLIC_CLERK_SIGN_UP_URL}}
+        node-version: [18.x]
+    #     # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    # env:
+    #   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: ${{vars.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}}
+    #   CLERK_SECRET_KEY: ${{vars.CLERK_SECRET_KEY}}
+    #   NEXT_PUBLIC_CLERK_SIGN_IN_URL: ${{secrets.NEXT_PUBLIC_CLERK_SIGN_IN_URL}}
+    #   NEXT_PUBLIC_CLERK_SIGN_UP_URL: ${{secrets.NEXT_PUBLIC_CLERK_SIGN_UP_URL}}
       
     steps:
     - uses: actions/checkout@v4
@@ -29,17 +29,18 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build 
+    - name: npm installation
+      run: npm install
+    # - run: npm run build 
 
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4

@@ -9,8 +9,8 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Print Perfection Admin Auth",
-  description: "Admin Auth Page for Print_Perfection Webapp",
+  title: "Print Perfection Auth",
+  description: "Auth Page for Print_Perfection Webapp",
 };
 
 export default function RootLayout({

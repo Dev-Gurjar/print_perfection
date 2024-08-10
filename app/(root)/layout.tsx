@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 
-import {
-  ClerkProvider,
-} from '@clerk/nextjs'
+import { ClerkProvider } from "@clerk/nextjs";
+import NavBar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Print Perfection Admin Dashboard",
-  description: "Admin Dashboard Page for Print_Perfection Webapp",
+  title: "Print Perfection",
+  description: "Home Page for Print_Perfection Webapp",
 };
 
 export default function RootLayout({
@@ -19,12 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body>
+    <html lang="en">
+      <body>
+        <ClerkProvider>
+          <NavBar />
           {children}
-        </body>
-      </html>
-    </ClerkProvider>
-  )
+        </ClerkProvider>
+      </body>
+    </html>
+  );
 }

@@ -152,70 +152,70 @@ export const mcarousel: mcarousel[] = [
 export const reviews: Reviews[] = [
   {
     id: 1,
-    star: 5,
+    stars: 5,
     title: "Excellent Product",
     text: "I am extremely satisfied with the quality and performance. Highly recommend!",
     name: "Alice Johnson"
   },
   {
     id: 2,
-    star: 4,
+    stars: 4,
     title: "Very Good",
     text: "The product met my expectations, but there is room for improvement.",
     name: "Bob Smith"
   },
   {
     id: 3,
-    star: 3,
+    stars: 3,
     title: "Average Experience",
     text: "It’s okay, but I expected better features for the price.",
     name: "Charlie Brown"
   },
   {
     id: 4,
-    star: 2,
+    stars: 2,
     title: "Not Impressed",
     text: "The product did not meet my expectations and I had issues with the customer service.",
     name: "Diana Prince"
   },
   {
     id: 5,
-    star: 5,
+    stars: 5,
     title: "Outstanding Service",
     text: "Exceptional service and quality. Will definitely buy again.",
     name: "Eve Adams"
   },
   {
     id: 6,
-    star: 4,
+    stars: 4,
     title: "Good Value",
     text: "Good value for the money. It does the job well.",
     name: "Frank Miller"
   },
   {
     id: 7,
-    star: 3,
+    stars: 3,
     title: "Decent",
     text: "It works fine, but it’s nothing special.",
     name: "Grace Lee"
   },
   {
     id: 8,
-    star: 5,
+    stars: 5,
     title: "Perfect!",
     text: "Everything was perfect. Exceeded my expectations in every way.",
     name: "Harry Potter"
   },
   {
     id: 9,
-    star: 2,
+    stars: 2,
     title: "Disappointing",
     text: "I faced multiple issues and would not recommend this product.",
     name: "Ivy League"
   },
   {
     id: 10,
-    star: 4,
+    stars: 4,
     title: "Pretty Good",
     text: "Overall, I’m satisfied with the purchase, though there are minor issues.",
     name: "John Doe"

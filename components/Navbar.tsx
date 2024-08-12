@@ -21,6 +21,7 @@ const NavBar = () => {
   return (
     <nav className="bg-white shadow fixed top-0 left-0 w-full z-50">
       <div className="mx-2 py-1.5 md:px-4 flex items-center justify-between">
+
         {/* Mobile Menu Button */}
         <div className="block md:hidden">
           <button className="p-3" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -29,7 +30,7 @@ const NavBar = () => {
         </div>
 
         {/* Logo */}
-        <div className="block w=2/3 md:w-1/6 mr-4 text-center md:text-left">
+        <div className="block w-2/3 md:w-1/6 mr-4 text-center md:text-left">
           <Link href="/" className="text-2xl text-left font-bold text-gray-800">
             <p className="text-body-bold font-bold">PRINT PERFECTION</p>
           </Link>
@@ -38,11 +39,11 @@ const NavBar = () => {
         {/* Navbar Items */}
         <div className="hidden md:block w-2/4 text-center mx-3">
           <ul className="flex flex-wrap justify-center space-x-6">
-            <li className="p-2">
-              <Link href="/shop" className="hover:text-gray-900">
+            <li className="p-2 relative">
+              <Link href="/shop" className="hover:text-gray-900 shop">
                 SHOP
               </Link>
-              <div className="absolute hidden w-48 bg-white rounded-md shadow-lg mt-2">
+              <div className="absolute shop1 hidden w-48 bg-white rounded-md shadow-lg mt-2">
                 <ul className="py-2">
                   <li>
                     <Link
@@ -63,7 +64,7 @@ const NavBar = () => {
                 </ul>
               </div>
             </li>
-            <li className="p-2">
+            <li className="p-2 relative">
               <Link href="/story" className="hover:text-gray-900">
                 OUR STORY
               </Link>
@@ -101,6 +102,14 @@ const NavBar = () => {
           </ul>
         </div>
 
+        {/* Add CSS to show dropdown on hover */}
+        <style jsx>{`
+          .shop:hover .shop1 {
+            display: block;
+          }
+        `}</style>
+
+        {/* Rest of your code... */}
         <div className="flex  md:hidden">
           <button
             className={`hover:bg-gray-300 mx-1.5 ${isSignedIn ? 'pt-2.5' : 'pt-0'}`}
@@ -146,6 +155,7 @@ const NavBar = () => {
           </button>
         </div>
       </div>
+      
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white shadow-lg z-50">

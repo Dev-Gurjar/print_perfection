@@ -15,7 +15,7 @@ interface Reviews {
 
 const ReviewsComp: React.FC<{ allreviews: Reviews[] }> = ({ allreviews }) => {
   return (
-    <section className=" p-10 h-1/2 md:h-2/3 bg-[#f9f9f9]"> {/* Brownish background color */}
+    <section className=" p-10 h-2/3 bg-[#f9f9f9]"> {/* Brownish background color */}
       <div className="lg:mx-auto max-w-5xl ">
         <h1 className="text-[2rem] tracking-widest font-bold m-8 text-center">
           Felling Lucky

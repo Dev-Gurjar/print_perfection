@@ -8,3 +8,13 @@ body,
   height: 100%;
 }
 
+.react-multi-carousel-list{
+  display: flex;
+  align-items: center;
+  height: 65vh;
+}
+
+
+/* .react-multi-carousel-list  img{
+  height: 100%;
+} */ 

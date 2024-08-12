@@ -13,28 +13,30 @@ import { UserButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/clerk-react";
 
 const NavBar = () => {
+  console.log("hiii");
+
   const { isSignedIn } = useUser();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow fixed top-0 left-0 w-full z-50">
-      <div className="mx-2 py-5 lg:px-4 flex items-center justify-between">
+      <div className="mx-2 py-1.5 md:px-4 flex items-center justify-between">
         {/* Mobile Menu Button */}
-        <div className="block lg:hidden">
+        <div className="block md:hidden">
           <button className="p-3" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu />
           </button>
         </div>
 
         {/* Logo */}
-        <div className="block w=2/3 lg:w-1/6 mr-4 text-center lg:text-left">
+        <div className="block w=2/3 md:w-1/6 mr-4 text-center md:text-left">
           <Link href="/" className="text-2xl text-left font-bold text-gray-800">
             <p className="text-body-bold font-bold">PRINT PERFECTION</p>
           </Link>
         </div>
 
         {/* Navbar Items */}
-        <div className="hidden lg:block w-2/4 text-center mx-3">
+        <div className="hidden md:block w-2/4 text-center mx-3">
           <ul className="flex flex-wrap justify-center space-x-6">
             <li className="p-2">
               <Link href="/shop" className="hover:text-gray-900">
@@ -99,9 +101,9 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <div className="flex lg:hidden">
+        <div className="flex  md:hidden">
           <button
-            className="hover:bg-gray-300 m-1.5"
+            className="hover:bg-gray-300 mx-1.5 pt-2.5"
             onClick={() => {
               if (!isSignedIn) {
                 window.location.href = "/sign-in";
@@ -110,21 +112,21 @@ const NavBar = () => {
           >
             {isSignedIn ? <UserButton /> : <Person />}
           </button>
-          <button className="hover:bg-gray-300 m-1.5">
+          <button className="hover:bg-gray-300 mx-1.5">
             <Favorite />
           </button>
-          <button className="hover:bg-gray-300 m-1.5">
+          <button className="hover:bg-gray-300 mx-1.5">
             <LocalMall />
           </button>
         </div>
 
         {/* Desktop Icons */}
-        <div className="hidden lg:flex space-x-2">
-          <button className="mr-3 border-2 border-black px-4">
+        <div className="hidden md:flex space-x-2">
+          <button className="mr-3 border border-black px-4">
             <h1>Shop Now</h1>
           </button>
           <button
-            className="hover:bg-gray-300 p-1"
+            className="hover:bg-gray-300 px-1 pt-2.5"
             onClick={() => {
               if (!isSignedIn) {
                 window.location.href = "/sign-in";
@@ -146,7 +148,7 @@ const NavBar = () => {
       </div>
       {/* Mobile Menu Drawer */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-white shadow-lg z-50">
+        <div className="md:hidden fixed inset-0 bg-white shadow-lg z-50">
           <div className="p-4">
             {/* Close Button */}
             <button

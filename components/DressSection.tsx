@@ -15,9 +15,9 @@ interface DressSectionProps {
 
 const DressSection: React.FC<DressSectionProps> = ({ dresses }) => {
   return (
-    <section className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-      <div>
-        <ul className="mt-8 grid gap-4  grid-cols-2 sm:grid-cols-2 lg:grid-cols-4">
+    <section className="mx-auto  px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
+      <div className="h-5/6">
+        <ul className="mt-8 grid gap-4  grid-cols-2 md:grid-cols-4 ">
           {dresses.map((dress) => (
             <li key={dress.id}>
               <Link href={`/dresses/${dress.id}`}>
@@ -26,9 +26,9 @@ const DressSection: React.FC<DressSectionProps> = ({ dresses }) => {
                     src={dress.imageUrl}
                     alt={dress.name}
                     layout="responsive"
-                    width={300} // adjust the width and height as needed
-                    height={600}
-                    className="object-cover h-20 transition duration-500 group-hover:scale-105 "
+                    width={300}
+                    height={499}
+                    className="object-cover transition duration-500 group-hover:scale-105 "
                   />
                   <div className="relative flex flex-col items-center bg-white pt-2">
                     <h3 className="text-3xl text text-center text-gray-700 group-hover:underline group-hover:underline-offset-4">

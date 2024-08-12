@@ -103,14 +103,14 @@ const NavBar = () => {
 
         <div className="flex  md:hidden">
           <button
-            className="hover:bg-gray-300 mx-1.5 pt-2.5"
+            className={`hover:bg-gray-300 mx-1.5 ${isSignedIn ? 'pt-2.5' : 'pt-0'}`}
             onClick={() => {
               if (!isSignedIn) {
                 window.location.href = "/sign-in";
               }
             }}
           >
-            {isSignedIn ? <UserButton /> : <Person />}
+            {isSignedIn ? <UserButton  /> : <Person />}
           </button>
           <button className="hover:bg-gray-300 mx-1.5">
             <Favorite />
@@ -126,14 +126,14 @@ const NavBar = () => {
             <h1>Shop Now</h1>
           </button>
           <button
-            className="hover:bg-gray-300 px-1 pt-2.5"
+            className={`hover:bg-gray-300 px-1.5 ${isSignedIn ? 'pt-2.5' : 'pt-0'}`}
             onClick={() => {
               if (!isSignedIn) {
                 window.location.href = "/sign-in";
               }
             }}
           >
-            {isSignedIn ? <UserButton /> : <Person />}
+            {isSignedIn ? <UserButton /> : <Person className="!pt-0"/>}
           </button>
           <button className="hover:bg-gray-300 p-2">
             <Favorite />

@@ -13,7 +13,7 @@ interface Reviews {
   name: string;
 }
 
-const ReviewsComp: React.FC<{ reviews: Reviews[] }> = ({ reviews }) => {
+const ReviewsComp: React.FC<{ allreviews: Reviews[] }> = ({ allreviews }) => {
   return (
     <section className=" p-10 h-1/2 md:h-2/3 bg-[#f9f9f9]"> {/* Brownish background color */}
       <div className="lg:mx-auto max-w-5xl ">
@@ -44,7 +44,7 @@ const ReviewsComp: React.FC<{ reviews: Reviews[] }> = ({ reviews }) => {
           }}
           className="coverflow "
         >
-          {reviews.map((review) => (
+          {allreviews.map((review) => (
             <SwiperSlide key={review.id} className="py-5">
               <div className="review bg-white p-10 mb-14 rounded-lg shadow-md"> 
                 <div className="stars flex mb-2">

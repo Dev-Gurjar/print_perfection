@@ -123,7 +123,7 @@ export default function Home() {
         </div>
       </div>
 
-      <ReviewsComp reviews={reviews} />
+      <ReviewsComp allreviews={reviews} />
 
       <div className="my-10 mx-auto box-border max-w-5xl text-center px-10">
         <p className="text-4xl tracking-wide mb-9 box-border">

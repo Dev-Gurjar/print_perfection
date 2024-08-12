@@ -15,7 +15,7 @@ interface mcarousel {
 
 interface Reviews {
   id: number;
-star: number;
+stars: number;
 title: string;
 text: string;
 name: string;

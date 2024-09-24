@@ -34,7 +34,7 @@ const DressSection: React.FC<DressSectionProps> = ({ dresses }) => {
                     <h3 className="text-3xl text text-center text-gray-700 group-hover:underline group-hover:underline-offset-4">
                       {dress.name}
                     </h3>
-                    <button className=" w-1/2 m-3 text-center border divide-slate-200 py-1.5">
+                    <button className="  m-3 text-center border divide-slate-200 py-1.5">
                       <p className="px-2 w-9/8">Shop {dress.bname}</p>
                     </button>
                   </div>

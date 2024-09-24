@@ -10,22 +10,22 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="relative">
+      <div className="relative mt-16 md:mt-24" >
         <a href="/collections">
           <picture>
-            <source media="(max-width: 768px)" srcSet="/IMG_7700.PNG" />
+            <source media="(max-width: 640px)" srcSet="/mobhero.jpeg" />
             <img
               src="/commingsoon.png"
               alt="banner"
-              className="w-screen h-dvh object-cover"
+              className="max-w-full max-h-full sm:w-full sm:h-full object-cover object-fit-contain"
             />
           </picture>
         </a>
-        <div className="absolute hidden md:block w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+        <div className="absolute hidden sm:block w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
           <h2 className="text-7xl font-bold tracking-widest mb-4">
             Comming Soon
           </h2>
-          <button className=" w-1/3 mt-5 text-center border border-black py-1.5">
+          <button className="w-1/3 mt-5 text-center border border-black py-1.5">
             <p className="px-2 w-9/8">Shop Now</p>
           </button>
         </div>
@@ -55,7 +55,7 @@ export default function Home() {
             <img
               src="/commingsoon.png"
               alt="banner"
-              className="w-screen h-dvh max-w-full object-cover"
+              className="w-screen h-96 md:h-dvh max-w-full object-cover"
             />
           </picture>
         </a>
@@ -68,7 +68,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className=" mx-auto box-border max-w-5xl text-center p-20">
+      <div className=" mx-auto box-border max-w-5xl text-center p-10 md:py-20">
         <p className="box-border text-xl tracking-widest">
           We support the art of hand block printing and sustainably handmade
           garments that utilise tradition and ritual through ancient practice.
@@ -125,7 +125,7 @@ export default function Home() {
 
       <ReviewsComp allreviews={reviews} />
 
-      <div className="my-10 mx-auto box-border max-w-5xl text-center px-10">
+      <div className="my-10 mx-auto box-border max-w-5xl text-center px-5">
         <p className="text-4xl tracking-wide mb-9 box-border">
           Our Charity Partners
         </p>
@@ -135,12 +135,12 @@ export default function Home() {
           Sewing the Seeds and Barakat Bundle. We have pledged an ongoing
           monthly donation of $10,000 to support these organisations.
         </p>
-        <button className=" w-1/3 m-5 text-center hover:underline py-1.5">
+        <button className="  m-5 text-center hover:underline py-1.5">
           <p className="px-2 text-2xl w-9/8">Learn More</p>
         </button>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }

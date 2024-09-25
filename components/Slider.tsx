@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import ImageMulti from "./ImageMulti";
 
 interface MCarousel {
   id: string;
@@ -14,21 +14,25 @@ interface MCarousel {
   imageUrl2: string;
 }
 
-const Slider: React.FC<{ mcarousels: MCarousel[] }> = ({ mcarousels }) => {
+const Slider: React.FC<{ mCarousels: MCarousel[] }> = ({ mCarousels }) => {
   return (
     <div className="relative my-10 overflow-hidden">
       <Swiper
-        centeredSlides={true}
+        // centeredSlides={true}
         loop={true}
         pagination={{
           clickable: true,
+
+          renderBullet: (index, className) => {
+            return `<span class="${className}">${index + 1}</span>`;
+          },
         }}
-        navigation={true}
+        // navigation={true}
         breakpoints={{
           950: {
             slidesPerView: 4, // Show 2.5 slides on medium screens
           },
-          680:{
+          680: {
             slidesPerView: 3, // Show 2.5 slides on medium screens
           },
           450: {
@@ -36,34 +40,9 @@ const Slider: React.FC<{ mcarousels: MCarousel[] }> = ({ mcarousels }) => {
           },
         }}
       >
-        {mcarousels.map((carousel) => (
+        {mCarousels.map((carousel) => (
           <SwiperSlide key={carousel.id} className="relative">
-            <a href="#" className="group block px-1.5 w-full">
-              <div className="relative w-full h-[24rem] overflow-hidden">
-                <Image
-                  src={carousel.imageUrl1}
-                  alt={`${carousel.name} image 1`}
-                  layout="fill"
-                  objectFit="contain"
-                  className="absolute h-full inset-0 opacity-100 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
-                />
-                <Image
-                  src={carousel.imageUrl2}
-                  alt={`${carousel.name} image 2`}
-                  layout="fill"
-                  objectFit="contain"
-                  className="absolute h-full inset-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
-                />
-              </div>
-              <div className="relative text-center bg-white pt-3">
-                <h3 className="text-sm text-gray-700 group-hover:underline group-hover:underline-offset-4">
-                  {carousel.name}
-                </h3>
-                <p className="mt-1.5 tracking-wide text-gray-900">
-                  Rs {carousel.price}
-                </p>
-              </div>
-            </a>
+            <ImageMulti imgData={carousel} />
           </SwiperSlide>
         ))}
       </Swiper>

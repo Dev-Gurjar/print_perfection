@@ -1,5 +1,5 @@
 import DressSection from "@/components/DressSection";
-import { UserButton } from "@clerk/nextjs";
+import { UserButton, UserProfile } from "@clerk/nextjs";
 import Image from "next/image";
 import "react-multi-carousel/lib/styles.css";
 
@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="relative mt-16 md:mt-24" >
+      <div className="relative mt-16 md:mt-24 lg:mt-20" >
         <a href="/collections">
           <picture>
             <source media="(max-width: 640px)" srcSet="/mobhero.jpeg" />
@@ -26,12 +26,14 @@ export default function Home() {
             Comming Soon
           </h2>
           <button className="w-1/3 mt-5 text-center border border-black py-1.5">
+          <a href="/shop">
             <p className="px-2 w-9/8">Shop Now</p>
+            </a>
           </button>
         </div>
       </div>
 
-      <div className="mt-10 mx-auto box-border max-w-5xl text-center px-10">
+      <div className="my-10 mx-auto box-border max-w-5xl text-center px-10">
         <p className="text-4xl tracking-wide mb-9 box-border">
           Slowly, Ethically and Handcrafted
         </p>
@@ -64,7 +66,9 @@ export default function Home() {
             Support the Artists
           </p>
           <button className=" w-1/3 mt-5 text-center border border-black py-1.5">
+          <a href="/shop">
             <p className="px-2 w-9/8">Shop Now</p>
+            </a>
           </button>
         </div>
       </div>
@@ -83,7 +87,7 @@ export default function Home() {
         referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
 
-      <Slider mcarousels={mcarousel} />
+      <Slider mCarousels={mcarousel} />
 
       <div className="relative">
         <a href="/collections">

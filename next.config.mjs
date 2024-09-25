@@ -5,7 +5,8 @@ const nextConfig = {
         remotePatterns: [
 
           {
-            hostname: 'asia.daughtersofindia.net',
+            hostname: 'asia.daughtersofindia.net', 
+            // hostname:'readymadeui.com',
           },
     
         ],

@@ -15,7 +15,7 @@ interface DressSectionProps {
 
 const DressSection: React.FC<DressSectionProps> = ({ dresses }) => {
   return (
-    <section className="mx-auto  px-4 py-8 sm:px-6 sm:py-8 lg:px-8">
+    <section className="mx-auto  px-4 sm:px-6 sm:py-8 lg:px-8">
       <div className="h-5/6">
         <ul className="mt-8 grid gap-4  grid-cols-2 md:grid-cols-4 ">
           {dresses.map((dress) => (

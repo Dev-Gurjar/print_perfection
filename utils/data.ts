@@ -15,12 +15,55 @@ interface mcarousel {
 
 interface Reviews {
   id: number;
-stars: number;
-title: string;
-text: string;
-name: string;
+  stars: number;
+  title: string;
+  text: string;
+  name: string;
 }
-// export const homeurls: 
+
+interface favorites {
+  id: number;
+  name: string;
+  availabelsizes: string[];
+  price: number;
+  image: string;
+}
+// export const homeurls:
+export const favorites: favorites[] = [
+  {
+    id: 1,
+    name: "Kyra Midi Dress ~ Apricot Blush",
+    price: 11000,
+    availabelsizes: ["S", "M", "L"],
+    image:
+      "https://asia.daughtersofindia.net/cdn/shop/files/354234288_115268931593027_4752939741253525018_n.jpg?v=1686648550&width=1080",
+  },
+  {
+    id: 2,
+    name: "Sita Maxi Dress ~ Daffodil",
+    price: 11100,
+    availabelsizes: ["S", "M", "L"],
+    image:
+      "https://asia.daughtersofindia.net/cdn/shop/files/354224087_1433339210812790_6513351624880181195_n.jpg?v=1686648550&width=1080",
+  },
+  {
+    id: 3,
+    name: "Kyra Midi Dress ~ Apricot Blush",
+    price: 11000,
+    availabelsizes: ["S", "M", "L"],
+    image:
+      "https://asia.daughtersofindia.net/cdn/shop/files/354234288_115268931593027_4752939741253525018_n.jpg?v=1686648550&width=1080",
+  },
+  {
+    id: 4,
+    name: "Sita Maxi Dress ~ Daffodil",
+    price: 11100,
+    availabelsizes: ["S", "M", "L"],
+    image:
+      "https://asia.daughtersofindia.net/cdn/shop/files/354224087_1433339210812790_6513351624880181195_n.jpg?v=1686648550&width=1080",
+  },
+
+];
 
 export const dresses: Dress[] = [
   {
@@ -155,69 +198,69 @@ export const reviews: Reviews[] = [
     stars: 5,
     title: "Excellent Product",
     text: "I am extremely satisfied with the quality and performance. Highly recommend!",
-    name: "Alice Johnson"
+    name: "Alice Johnson",
   },
   {
     id: 2,
     stars: 4,
     title: "Very Good",
     text: "The product met my expectations, but there is room for improvement.",
-    name: "Bob Smith"
+    name: "Bob Smith",
   },
   {
     id: 3,
     stars: 3,
     title: "Average Experience",
     text: "It’s okay, but I expected better features for the price.",
-    name: "Charlie Brown"
+    name: "Charlie Brown",
   },
   {
     id: 4,
     stars: 2,
     title: "Not Impressed",
     text: "The product did not meet my expectations and I had issues with the customer service.",
-    name: "Diana Prince"
+    name: "Diana Prince",
   },
   {
     id: 5,
     stars: 5,
     title: "Outstanding Service",
     text: "Exceptional service and quality. Will definitely buy again.",
-    name: "Eve Adams"
+    name: "Eve Adams",
   },
   {
     id: 6,
     stars: 4,
     title: "Good Value",
     text: "Good value for the money. It does the job well.",
-    name: "Frank Miller"
+    name: "Frank Miller",
   },
   {
     id: 7,
     stars: 3,
     title: "Decent",
     text: "It works fine, but it’s nothing special.",
-    name: "Grace Lee"
+    name: "Grace Lee",
   },
   {
     id: 8,
     stars: 5,
     title: "Perfect!",
     text: "Everything was perfect. Exceeded my expectations in every way.",
-    name: "Harry Potter"
+    name: "Harry Potter",
   },
   {
     id: 9,
     stars: 2,
     title: "Disappointing",
     text: "I faced multiple issues and would not recommend this product.",
-    name: "Ivy League"
+    name: "Ivy League",
   },
   {
     id: 10,
     stars: 4,
     title: "Pretty Good",
     text: "Overall, I’m satisfied with the purchase, though there are minor issues.",
-    name: "John Doe"
-  }
+    name: "John Doe",
+  },
 ];

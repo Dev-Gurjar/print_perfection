@@ -1,5 +1,4 @@
 import DressSection from "@/components/DressSection";
-import { UserButton, UserProfile } from "@clerk/nextjs";
 import Image from "next/image";
 import "react-multi-carousel/lib/styles.css";
 
@@ -144,7 +143,6 @@ export default function Home() {
         </button>
       </div>
 
-      <Footer />
     </>
   );
 }

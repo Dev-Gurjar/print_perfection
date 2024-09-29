@@ -126,7 +126,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "2",
     name: "Nora Maxi Dress ~ Primrose 4",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/products/Nora-Primrose-2.jpg?v=1670559166&width=1000",
@@ -135,7 +135,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "4",
     name: "Nora Maxi Dress ~ Primrose 5",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/files/Jasmine-Maxi-Seamist-2.jpg?v=1719968577&width=1000",
@@ -144,7 +144,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "3",
     name: "Nora Maxi Dress ~ Primrose 6",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/files/Rooh-Blouse-Pine-1.jpg?v=1719907503&width=1000",
@@ -153,7 +153,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "5",
     name: "Nora Maxi Dress ~ Primrose 7",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/files/Rooh-Blouse-Pine-1.jpg?v=1719907503&width=1000",
@@ -164,7 +164,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "6",
     name: "Nora Maxi Dress ~ Primrose 8",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/files/Jasmine-Maxi-Seamist-2.jpg?v=1719968577&width=1000",
@@ -173,7 +173,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "7",
     name: "Nora Maxi Dress ~ Primrose 9",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/files/Rooh-Blouse-Pine-1.jpg?v=1719907503&width=1000",
@@ -182,7 +182,7 @@ export const mcarousel: mcarousel[] = [
     price: "14,000",
   },
   {
-    id: "Sega",
+    id: "1",
     name: "Nora Maxi Dress ~ Primrose 8",
     imageUrl1:
       "https://asia.daughtersofindia.net/cdn/shop/files/Jasmine-Maxi-Seamist-2.jpg?v=1719968577&width=1000",

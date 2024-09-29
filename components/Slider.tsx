@@ -16,18 +16,15 @@ interface MCarousel {
 
 const Slider: React.FC<{ mCarousels: MCarousel[] }> = ({ mCarousels }) => {
   return (
-    <div className="relative my-10 overflow-hidden">
+    <div className=" my-8 ">
       <Swiper
-        // centeredSlides={true}
+        centeredSlides={true}
         loop={true}
         pagination={{
+          type: 'bullets',
           clickable: true,
 
-          renderBullet: (index, className) => {
-            return `<span class="${className}">${index + 1}</span>`;
-          },
-        }}
-        // navigation={true}
+        }}      
         breakpoints={{
           950: {
             slidesPerView: 4, // Show 2.5 slides on medium screens
@@ -38,10 +35,13 @@ const Slider: React.FC<{ mCarousels: MCarousel[] }> = ({ mCarousels }) => {
           450: {
             slidesPerView: 2, // Show 1.5 slides on small screens
           },
+          0:{
+            slidesPerView:1.5,
+          }
         }}
       >
         {mCarousels.map((carousel) => (
-          <SwiperSlide key={carousel.id} className="relative">
+          <SwiperSlide key={carousel.id} className="">
             <ImageMulti imgData={carousel} />
           </SwiperSlide>
         ))}

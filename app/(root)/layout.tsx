@@ -4,6 +4,7 @@ import "../globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import NavBar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Gfont = EB_Garamond({
   weight: "400",
@@ -47,6 +48,7 @@ export default function RootLayout({
         <ClerkProvider>
           <NavBar />
           {children}
+          <Footer />
         </ClerkProvider>
       </body>
     </html>

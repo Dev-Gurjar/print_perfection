@@ -16,6 +16,7 @@ import { UserButton } from "@clerk/nextjs";
 import { useUser } from "@clerk/clerk-react";
 import { favorites, dresses } from "@/utils/data";
 import DressSection from "./DressSection";
+import Image from "next/image";
 // import { AiOutlineHome, AiOutlineMenu } from "react-icons/ai";
 
 const NavBar = () => {
@@ -349,7 +350,7 @@ const NavBar = () => {
                   >
                     <div className="flex items-start w-full justify-between space-x-6 ">
                       {/* Image */}
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
                         className="w-24 h-40 rounded-lg flex-shrink-0"
@@ -446,7 +447,7 @@ const NavBar = () => {
                   >
                     <div className="flex items-start w-full justify-between space-x-6 ">
                       {/* Image */}
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.name}
                         className="w-24 h-40 rounded-lg flex-shrink-0"

@@ -1,6 +1,7 @@
+"use client"
 import Products from "@/components/Products";
-import React from "react";
-
+import { useEffect, useState } from "react";
+import { fetchProducts, Product } from "@/utils/data"; // Adjust the path based on your project structure
 const products = [
   {
     id: 1,
@@ -37,7 +38,17 @@ const products = [
 ];
 
 const Shop = () => {
+  const [products, setProducts] = useState<Product[]>([]);
 
+  // Fetch products when the component mounts
+  useEffect(() => {
+    const getProducts = async () => {
+      const productsData = await fetchProducts();
+      setProducts(productsData);
+    };
+
+    getProducts();
+  }, []);
   return (
     <>
     <div className="mb-20">

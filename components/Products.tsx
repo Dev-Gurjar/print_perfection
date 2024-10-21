@@ -1,20 +1,13 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
+import { Product } from "@/utils/data"; // Adjust the path as necessary
 
 const TESelect = dynamic(
   () => import("tw-elements-react").then((mod) => mod.TESelect),
   { ssr: false }
 );
-
-// Define the interface for a single product
-interface Product {
-  id: number;
-  name: string;
-  price: string;
-  imageUrl: string;
-  reviews: string;
-}
 
 // Define the interface for the props of the Products component
 interface ProductsProps {
@@ -100,23 +93,58 @@ const Products: React.FC<ProductsProps> = ({ products }) => {
         {/* Product Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product) => (
-            <div key={product.id} className="text-center">
-              <div className="relative">
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="w-full h-auto"
+            <span
+              key={product._id}
+              className="grid__item grid-product small--one-half medium-up--one-quarter"
+            >
+              {/* <div className="grid-product__content"> */}
+              {/* <div className="grid__item-image-wrapper"> */}
+              <a href="#" className="grid-product__link">
+                {/* Favorite Button */}
+                <button
+                  className="grid__favorite-button"
+                  aria-label="Favorite product"
                 />
-                <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-900">
-                  ♥
-                </button>
+                <div className="grid-product__image-mask relative h-0 pb-[150%]">
+                  <Image
+                    src={product.image1}
+                    alt={`${product.name} image 1`}
+                    layout="fill"
+                    objectFit="cover"
+                    loading="lazy"
+                    className="absolute w-full h-full object-cover hmax-w-full max-h-full inset-0 opacity-100 transition-opacity duration-300 ease-in-out group-hover:opacity-0"
+                  />
+                  <div className="grid-product__secondary-image small--hide absolute inset-0 w-full h-full">
+                    <Image
+                      src={product.image2}
+                      alt={`${product.name} image 2`}
+                      layout="fill"
+                      objectFit="cover"
+                      loading="lazy"
+                      className="absolute w-full h-full max-w-full max-h-full inset-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                    />
+                  </div>
+                </div>
+              </a>
+              <div className="grid-product__meta text-center">
+                <div className="grid-product__title">{product.name}</div>
+
+                <span
+                  className="stamped-product-reviews-badge"
+                  style={{ display: "block" }}
+                >
+                  <span
+                    className="stamped-badge"
+                    aria-label={`${product.reviews} reviews`}
+                  >
+                    <span>{product.reviews} reviews</span>
+                  </span>
+                </span>
+                <div className="grid-product__price">Rs. {product.price}</div>
               </div>
-              <div className="mt-3">
-                <h3 className="text-lg font-semibold">{product.name}</h3>
-                <p className="text-sm">{product.reviews}</p>
-                <p className="text-lg font-bold">{product.price}</p>
-              </div>
-            </div>
+              {/* </div> */}
+              {/* </div> */}
+            </span>
           ))}
         </div>
       </main>
